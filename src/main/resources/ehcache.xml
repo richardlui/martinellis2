@@ -1,0 +1,47 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./ehcache.xsd">
+         
+   	<defaultCache 
+	   	maxEntriesLocalHeap="10000"
+		maxElementsOnDisk="1000" 
+		eternal="false" 
+		overflowToDisk="false"
+		timeToIdleSeconds="3600" 
+		timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" 
+		statistics="true">
+	</defaultCache>
+	
+    <!-- 
+    	timeToIdleSeconds: Sets the time to idle for an element before it expires.
+		i.e. The maximum amount of time between accesses before an element expires
+		
+		timeToLiveSeconds: Sets the time to live for an element before it expires.
+		i.e. The maximum time between creation time and when an element expires.
+		
+		10800 = 3 hours
+     -->
+    <cache name="ResponseCache"
+           maxEntriesLocalHeap="10000"
+           maxElementsOnDisk="1000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToIdleSeconds="10800"
+           timeToLiveSeconds="10800"
+           memoryStoreEvictionPolicy="LFU"
+           statistics="true"
+            />
+
+    <cache name="LookupCache"
+           maxEntriesLocalHeap="10000"
+           maxElementsOnDisk="1000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToIdleSeconds="86400"
+           timeToLiveSeconds="86400"
+           memoryStoreEvictionPolicy="LFU"
+           statistics="true"
+            />
+            
+    
+</ehcache>

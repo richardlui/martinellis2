@@ -1,0 +1,8 @@
+autotype=none
+storage.backend=local
+storage.directory=/tmp/talent
+storage.index.search.backend=elasticsearch
+storage.index.search.local-mode=true
+storage.index.search.client-mode=false
+storage.index.search.directory=/tmp/talent/es
+
